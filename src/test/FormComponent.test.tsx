@@ -18,14 +18,14 @@ describe("FormComponent", () => {
       </Provider>
     );
 
-    expect(screen.getAllByText(/Text/i)).toHaveLength(2);
+    expect(screen.getAllByText(/Full Name/i)).toHaveLength(1);
     expect(screen.getByText(/Password/i)).toBeInTheDocument();
     expect(screen.getAllByText(/Email/i)).toHaveLength(1);
     expect(screen.getByText(/Number/i)).toBeInTheDocument();
     expect(screen.getByText(/Date/i)).toBeInTheDocument();
     expect(screen.getAllByText(/Select/i)).toHaveLength(2);
     expect(screen.getAllByText(/Checkbox/i)).toHaveLength(1);
-    expect(screen.getByText(/Radio:/i)).toBeInTheDocument();
+    expect(screen.getByText(/Gender:/i)).toBeInTheDocument();
     expect(screen.getByText(/Textarea/i)).toBeInTheDocument();
     expect(screen.getAllByText(/File/i)).toHaveLength(1);
   });
@@ -40,7 +40,7 @@ describe("FormComponent", () => {
     );
 
     //Text
-    const textInput = screen.getByLabelText(/Text:/i);
+    const textInput = screen.getByLabelText(/Full Name/i);
     fireEvent.change(textInput, { target: { value: "Rajesh" } });
     expect(textInput).toHaveValue("Rajesh");
 
@@ -55,7 +55,7 @@ describe("FormComponent", () => {
     expect(emailInput).toHaveValue("rajesh@example.com");
 
     //Number
-    const numberInput = screen.getByLabelText(/Number/i);
+    const numberInput = screen.getByLabelText(/Phone Number/i);
     fireEvent.change(numberInput, { target: { value: "5" } });
     expect(numberInput).toHaveValue(5);
 

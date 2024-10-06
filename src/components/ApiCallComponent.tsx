@@ -14,7 +14,6 @@ const UsersList: React.FC = () => {
     (state: RootState) => state.users
   );
 
- 
   const fetchUsers = async () => {
     dispatch(fetchUsersStart());
     try {
@@ -27,7 +26,7 @@ const UsersList: React.FC = () => {
       }
 
       const users = await response.json();
-      dispatch(fetchUsersSuccess(users)); // Dispatch success action with users
+      dispatch(fetchUsersSuccess(users));
     } catch (error) {
       dispatch(fetchUsersFailure("Failed to fetch users"));
       console.error("Error fetching users:", error);
@@ -39,17 +38,28 @@ const UsersList: React.FC = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="container">
       <h1>User List</h1>
       {loading && <p>Loading users...</p>}
       {error && <p>{error}</p>}
-      <ul>
-        {users.map((user) => (
-          <li key={user.id}>
-            <strong>{user.name}</strong> ({user.username}) - {user.email}
-          </li>
-        ))}
-      </ul>
+      <table className="user-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map((user) => (
+            <tr key={user.id}>
+              <td>{user.name}</td>
+              <td>{user.username}</td>
+              <td>{user.email}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

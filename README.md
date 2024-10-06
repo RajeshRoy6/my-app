@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+# Store Form Data in Redux and Display the Data
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+                      &
 
-## Available Scripts
+# Make an API Call to Fetch User Data, Store it in Redux, and Display the Data
 
-In the project directory, you can run:
+This project was build in React Typescript with Redux along with Unit Test.
 
-### `npm start`
+## Project Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+In the project repo, you can checkout the complete code:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Registration Form Page
 
-### `npm test`
+![Screenshot](../images/Registration%20Form%20Screenshot.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Submitted Form Page
 
-### `npm run build`
+![Screenshot](../images/Submitted%20form%20data%20Screenshot.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### API call User List Page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Screenshot](../images/API%20call%20User%20list%20Screenshot.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Field Input Error
 
-### `npm run eject`
+![Screenshot](../images/Field%20Input%20Error%20Screenshot.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### All Component Test Result
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Screenshot](../images/FormComponent%20Test%20Result%20Screenshot%20.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Screenshot](../images/Test%20Result%20for%20All%20Components%20Screenshot.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Test Coverage for All Component
 
-## Learn More
+![Screenshot](../images/Test%20Coverage%20for%20FormComponent%20Screenshot.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Screenshot](../images/Test%20Coverage%20for%20FormComponent%20Screenshot.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Form Submitted data to Redux store
+
+![Screenshot](../images/Form%20submitted%20Data%20to%20Redux%20store%20Screenshot%20.png)
+
+### Initial Stage of calling Api and Storing data to Redux
+
+![Screenshot](../images/Initial%20Stage%20of%20Calling%20Api%20and%20Storing%20Data%20to%20Redux%20Screenshot%20.png)
+
+### After Calling Api and Storing data to Redux store
+
+![Screenshot](../images/After%20Calling%20Api%20and%20Storing%20Data%20to%20Redux%20store%20Screenshot%20.png)
+
+## Thank You !

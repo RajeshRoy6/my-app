@@ -5,18 +5,54 @@ import { RootState } from "../redux/store";
 const DisplayComponent: React.FC = () => {
   const formData = useSelector((state: RootState) => state.form.formData);
   return (
-    <div className="container">
-      <h1>Submitted Data</h1>
-      <p>text: {formData.text}</p>
-      <p>password: {formData.password}</p>
-      <p>Email: {formData.email}</p>
-      <p>number: {formData.number}</p>
-      <p>date: {formData.date}</p>
-      <p>select: {formData.select}</p>
-      <p>Checkbox: {formData.checkbox ? "Checked" : "Unchecked"}</p>
-      <p>radio: {formData.radio}</p>
-      <p>textarea: {formData.textarea}</p>
-      <p>File: {formData.file ? formData.file.name : "No file uploaded"}</p>
+    <div className="data-container">
+        <h1 className="data-header">Submitted Data</h1>
+      <div className="data-form">
+        <div className="data-field">
+          <p className="data-label">Text:</p>
+          <p className="data-value text-value">{formData.text}</p>
+        </div>
+        <div className="data-field">
+          <p className="data-label">Password:</p>
+          <p className="data-value password-value">{formData.password}</p>
+        </div>
+        <div className="data-field">
+          <p className="data-label">Email:</p>
+          <p className="data-value email-value">{formData.email}</p>
+        </div>
+        <div className="data-field">
+          <p className="data-label">Number:</p>
+          <p className="data-value number-value">{formData.number}</p>
+        </div>
+        <div className="data-field">
+          <p className="data-label">Date:</p>
+          <p className="data-value date-value">{formData.date}</p>
+        </div>
+        <div className="data-field">
+          <p className="data-label">Select:</p>
+          <p className="data-value select-value">{formData.select}</p>
+        </div>
+        <div className="data-field">
+          <p className="data-label checkbox-label">Checkbox:</p>
+          <p className="data-value checkbox-value">
+            {formData.checkbox ? "Checked" : "Unchecked"}
+          </p>
+        </div>
+        <div className="data-field">
+          <p className="data-label radio-label">Radio:</p>
+          <p className="data-value radio-value">{formData.radio}</p>
+        </div>
+        <div className="data-field">
+          <p className="data-label textarea-label">Textarea:</p>
+          <p className="data-value textarea-value">{formData.textarea}</p>
+        </div>
+        <div className="data-field">
+          <p className="data-label file-label">File:</p>
+          <p className="data-value file-value">
+            {formData.file ? formData.file.name : "No file uploaded"}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
