@@ -17,7 +17,7 @@ interface Errors {
 }
 
 const FormComponent: React.FC = () => {
-  const [text, setText] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState(0);
@@ -39,7 +39,7 @@ const FormComponent: React.FC = () => {
     const newErrors: Errors = {};
 
     // Validation checks
-    if (!text.trim()) newErrors.text = "Full name is required";
+    if (!name.trim()) newErrors.text = "Full name is required";
     if (!password.trim()) newErrors.password = "Password is required";
     if (!email.includes("@")) newErrors.email = "Valid email is required";
     if (number <= 0) newErrors.number = "Please enter Phone number";
@@ -56,16 +56,16 @@ const FormComponent: React.FC = () => {
     }
 
     const formData = {
-      text,
+      name,
       password,
       email,
-      number,
       date,
       select,
-      checkbox,
       radio,
       textarea,
       file,
+      number,
+      checkbox,
     };
 
     dispatch(setFormData(formData));
@@ -89,8 +89,8 @@ const FormComponent: React.FC = () => {
               id="textInput"
               type="text"
               placeholder="Full Name"
-              value={text}
-              onChange={(e) => setText(e.target.value)}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
             {errors.text && <p className="error">{errors.text}</p>}
           </div>
@@ -154,36 +154,32 @@ const FormComponent: React.FC = () => {
               {errors.select && <p className="error">{errors.select}</p>}
             </div>
 
-
             <div className="form-group  gender-err">
-
-            <div className="gender">
-              <label>Gender:</label>
-              <div className="radio-group">
-                <input
-                  id="radioOption1"
-                  type="radio"
-                  value="option1"
-                  checked={radio === "option1"}
-                  onChange={(e) => setRadio(e.target.value)}
-                />
-                <label htmlFor="radioOption1">Option 1</label>
-                <input
-                  id="radioOption2"
-                  type="radio"
-                  value="option2"
-                  checked={radio === "option2"}
-                  onChange={(e) => setRadio(e.target.value)}
-                />
-                <label htmlFor="radioOption2">Option 2</label>
+              <div className="gender">
+                <label>Gender:</label>
+                <div className="radio-group">
+                  <input
+                    id="radioOption1"
+                    type="radio"
+                    value="option1"
+                    checked={radio === "option1"}
+                    onChange={(e) => setRadio(e.target.value)}
+                  />
+                  <label htmlFor="radioOption1">Option 1</label>
+                  <input
+                    id="radioOption2"
+                    type="radio"
+                    value="option2"
+                    checked={radio === "option2"}
+                    onChange={(e) => setRadio(e.target.value)}
+                  />
+                  <label htmlFor="radioOption2">Option 2</label>
+                </div>
               </div>
-
+              <div>
+                {errors.radio && <p className="error">{errors.radio}</p>}
               </div>
-              <div>{errors.radio && <p className="error">{errors.radio}</p>}</div>
-              
             </div>
-
-
           </div>
         </div>
 

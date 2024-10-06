@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface FormData {
-  text: string;
+  name: string;
   password: string;
   email: string;
   number: number;
@@ -19,16 +19,16 @@ interface FormSliceState {
 
 const initialState: FormSliceState = {
   formData: {
-    text: '',
+    name: '',
     password: '',
-    email: '',
-    number: 0,
+    email: '',    
     date: '',
-    select: '',
-    checkbox: false,
+    select: '',    
     radio: '',
     textarea: '',
     file: null,
+    number: 0,
+    checkbox: false,
   },
 };
 
