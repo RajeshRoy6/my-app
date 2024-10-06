@@ -30,8 +30,8 @@ const DisplayComponent: React.FC = () => {
         </div>
 
         <div className="data-field">
-          <p className="data-label radio-label">Radio:</p>
-          <p className="data-value radio-value">{formData.radio}</p>
+          <p className="data-label radio-label">Gender:</p>
+          <p className="data-value radio-value">{formData.gender}</p>
         </div>
         <div className="data-field">
           <p className="data-label textarea-label">Textarea:</p>

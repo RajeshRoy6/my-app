@@ -24,7 +24,7 @@ const FormComponent: React.FC = () => {
   const [date, setDate] = useState("");
   const [select, setSelect] = useState("");
   const [checkbox, setCheckbox] = useState(false);
-  const [radio, setRadio] = useState("");
+  const [gender, setGender] = useState("");
   const [textarea, setTextarea] = useState("");
   const [file, setFile] = useState<File | null>(null);
 
@@ -45,7 +45,7 @@ const FormComponent: React.FC = () => {
     if (number <= 0) newErrors.number = "Please enter Phone number";
     if (!date) newErrors.date = "Date is required";
     if (!select) newErrors.select = "Please select an option";
-    if (!radio) newErrors.radio = "Please choose a gender option";
+    if (!gender) newErrors.radio = "Please choose a gender option";
     if (!textarea.trim()) newErrors.textarea = "Textarea is required";
     if (!file) newErrors.file = "Please upload a file";
     if (!checkbox) newErrors.checkbox = "You must agree to the terms";
@@ -61,7 +61,7 @@ const FormComponent: React.FC = () => {
       email,
       date,
       select,
-      radio,
+      gender,
       textarea,
       file,
       number,
@@ -162,16 +162,16 @@ const FormComponent: React.FC = () => {
                     id="radioOption1"
                     type="radio"
                     value="option1"
-                    checked={radio === "option1"}
-                    onChange={(e) => setRadio(e.target.value)}
+                    checked={gender === "option1"}
+                    onChange={(e) => setGender(e.target.value)}
                   />
                   <label htmlFor="radioOption1">Option 1</label>
                   <input
                     id="radioOption2"
                     type="radio"
                     value="option2"
-                    checked={radio === "option2"}
-                    onChange={(e) => setRadio(e.target.value)}
+                    checked={gender === "option2"}
+                    onChange={(e) => setGender(e.target.value)}
                   />
                   <label htmlFor="radioOption2">Option 2</label>
                 </div>

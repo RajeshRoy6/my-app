@@ -34,7 +34,7 @@ In the project repo, you can checkout the complete code:
 
 ![Screenshot](./images/Test%20Coverage%20for%20FormComponent%20Screenshot.png)
 
-![Screenshot](./images/Test%20Coverage%20for%20FormComponent%20Screenshot.png)
+![Screenshot](./images/Test%20Coverage%20for%20All%20Components%20Screenshot.png)
 
 ### Form Submitted data to Redux store
 
